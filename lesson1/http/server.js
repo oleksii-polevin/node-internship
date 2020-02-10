@@ -19,10 +19,14 @@ const server = http.createServer((request, response) => {
     response.on('error', (err) => {
         console.error(err);
     });
-    response.write('Hello, world');
+    if (request.method === 'GET') {
+        response.write('used GET method');
+    } else {
+        response.write('used POST method');
+    }
 
     response.end();
-    console.log('response send');
+    console.log('response has sent');
 });
 
 server.listen(port, () => {

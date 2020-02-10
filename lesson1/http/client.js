@@ -7,7 +7,7 @@ const options = {
 };
 
 // some string for post request
-const data = JSON.stringify('request from client');
+const data = JSON.stringify('POST request from client');
 
 const postOptions = {
     host: 'localhost',
@@ -42,7 +42,6 @@ const reqPost = http.request(postOptions, (res) => {
         console.error(error);
     });
     res.on('data', d => {
-        console.log(res.statusCode);
         process.stdout.write(d + '\r\n');
     });
 });
