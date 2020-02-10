@@ -15,5 +15,14 @@
 ```
     npm run udpClient
 ```
+
+### HTTP (GET and POST requests)
+```
+    npm run httpServer
+```
+```
+    npm run httpClient 
+```
+
 ### ARRAYS
-- please fix all bugs
+- all bugs are fixed

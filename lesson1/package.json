@@ -8,7 +8,9 @@
     "netServer": "node net/server.js",
     "netClient": "node net/client.js",
     "udpServer": "node udp/server.js",
-    "udpClient": "node udp/client.js"
+    "udpClient": "node udp/client.js",
+    "httpServer": "node http/server.js",
+    "httpClient": "node http/client.js"
   },
   "author": "",
   "license": "ISC",
