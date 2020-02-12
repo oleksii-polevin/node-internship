@@ -9,16 +9,6 @@ const options = {
 // some string for post request
 const data = JSON.stringify('POST request from client');
 
-const postOptions = {
-    host: 'localhost',
-    port: 3000,
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': data.length
-    }
-};
-
 // GET request
 const callback = ((response) => {
     console.log('client is runnung\r\n');
@@ -37,7 +27,8 @@ const req = http.request(options, callback);
 req.end();
 
 // POST
-const reqPost = http.request(postOptions, (res) => {
+options.method = 'POST';
+const reqPost = http.request(options, (res) => {
     res.on('error', error => {
         console.error(error);
     });
