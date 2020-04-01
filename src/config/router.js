@@ -13,6 +13,11 @@ module.exports = {
         const router = express.Router();
 
         /**
+         * Route for static files
+         */
+        app.use(express.static('public'));
+
+        /**
          * Forwards any requests to the /v1/books URI to BooksRouter.
          * @name /v1/books
          * @function
