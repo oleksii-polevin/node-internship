@@ -23,7 +23,7 @@ module.exports = {
     async up(db) {
         const books = await readCsv();
         await db.collection('booksmodel').insertMany(books);
-        await db.collection('booksmodel').updateMany({}, { $set: { createdAt: Date(), version: 0 } });
+        await db.collection('booksmodel').updateMany({}, { $set: { createdAt: Date() } });
     },
 
     // async down(db) {
