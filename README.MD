@@ -1,3 +1,7 @@
-1 migrate-mongo up
+1. type in terminal: migrate-mongo up
 
-2 run app
+2. to run app, type in terminal:
+  - nodemon
+  or
+  -pm2 start
+
