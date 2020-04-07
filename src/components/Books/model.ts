@@ -1,7 +1,16 @@
-const { Schema } = require('mongoose');
-const connections = require('../../config/connection');
+import mongoose from 'mongoose';
+import connections from '../../config/connection';
 
-const BooksSchema = new Schema(
+export interface IbookSchema extends mongoose.Document {
+    title: string;
+    titleLength: number;
+    description: string;
+    code3: string;
+    createdAt: string;
+    updatedAt: string;
+}
+
+const BooksSchema: mongoose.Schema = new mongoose.Schema(
     {
         title: {
             type: String,
@@ -34,4 +43,4 @@ const BooksSchema = new Schema(
     },
 );
 
-module.exports = connections.model('BooksModel', BooksSchema);
+export const BooksModel: mongoose.Model<IbookSchema> = connections.model<IbookSchema>('BooksModel', BooksSchema);

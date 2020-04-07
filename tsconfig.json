@@ -8,6 +8,7 @@
       "removeComments": true,
       "sourceMap": false,
       "resolveJsonModule": true,
+      "esModuleInterop": true, 
       "plugins": [
         {
           "name": "tslint-language-service"

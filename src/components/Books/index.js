@@ -1,4 +1,4 @@
-const BookService = require('./service');
+import BookService from './service';
 
 /**
  * @function

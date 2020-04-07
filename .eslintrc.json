@@ -1,7 +1,7 @@
 {
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-       "project": "./tsconfig.json"
+        "project": "./tsconfig.json"
     },
     "extends": [
         "airbnb-base",
@@ -12,7 +12,9 @@
         "node": true,
         "mocha": true
     },
-    "plugins": ["prettier"],
+    "plugins": [
+        "prettier"
+    ],
     "rules": {
         "@typescript-eslint/indent": [
             2,
@@ -20,6 +22,13 @@
             {
                 "SwitchCase": 1
             }
+        ],
+        "@typescript-eslint/typedef": [
+            "error",
+            {
+                "arrowParameter": false,
+                "variableDeclaration": true
+              }
         ],
         "strict": 0,
         "no-var": "error",
