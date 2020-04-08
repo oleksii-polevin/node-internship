@@ -12,6 +12,7 @@ class Service {
         this.bookModel = bookModel;
     }
 
+
     /**
  * @async
  * @method getChartData
@@ -19,6 +20,7 @@ class Service {
  */
     getChartData(): mongoose.Aggregate<IbookData[]> {
         return this.bookModel.aggregate([{
+
             $group:
             { _id: '$code3', value: { $sum: 1 } },
         },

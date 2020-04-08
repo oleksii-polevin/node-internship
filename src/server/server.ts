@@ -11,12 +11,12 @@ const app: express.Application = express();
 /**
  * @description express.Application Middleware
  */
-middleware.init(app);
+middleware(app);
 
 /**
  * @description express.Application Routes
  */
-routes.init(app);
+routes(app);
 
 /**
  * @description sets port 3000 to default or unless otherwise specified in the environment

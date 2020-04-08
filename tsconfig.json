@@ -16,10 +16,12 @@
       ]
     },
     "include": [
-      "src/**/*"
+      "./src/**/*"
     ],
     "exclude": [
-      "node_modules"
+      "migrations",
+      "node_modules",
+      
     ]
   }
   

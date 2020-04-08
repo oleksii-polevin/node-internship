@@ -1,12 +1,12 @@
-const { Router } = require('express');
-const BooksComponent = require('../Books');
+import express from 'express';
+import Chart from '.';
 
 /**
  * Express router to mount books related functions on.
  * @type {Express.Router}
  * @const
  */
-const router = Router();
+const booksRouter: express.Router = express.Router();
 
 /**
  * Route serving list of books.
@@ -16,6 +16,6 @@ const router = Router();
  * @param {string} path - Express path
  * @param {callback} middleware - Express middleware.
  */
-router.get('/', BooksComponent.chart);
+booksRouter.get('/', Chart.chart);
 
-module.exports = router;
+export default booksRouter;
