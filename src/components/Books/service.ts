@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import { BooksModel, IbookSchema } from './model';
 
+// output interface
 export interface IbookData {
     code3: string;
     value: number;
