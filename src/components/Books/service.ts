@@ -1,11 +1,8 @@
 import mongoose from 'mongoose';
-import { BooksModel, IbookSchema } from './model';
+import BooksModel from './model';
+import { IbookSchema, IbookData } from './interfaces';
 
-// output interface
-export interface IbookData {
-    code3: string;
-    value: number;
-}
+
 class Service {
     private bookModel: mongoose.Model<IbookSchema>;
 

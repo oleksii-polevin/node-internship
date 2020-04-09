@@ -1,14 +1,6 @@
 import mongoose from 'mongoose';
 import connections from '../../config/connection';
-
-export interface IbookSchema extends mongoose.Document {
-    title: string;
-    titleLength: number;
-    description: string;
-    code3: string;
-    createdAt: string;
-    updatedAt: string;
-}
+import { IbookSchema } from './interfaces';
 
 const BooksSchema: mongoose.Schema = new mongoose.Schema(
     {
@@ -43,4 +35,6 @@ const BooksSchema: mongoose.Schema = new mongoose.Schema(
     },
 );
 
-export const BooksModel: mongoose.Model<IbookSchema> = connections.model<IbookSchema>('BooksModel', BooksSchema);
+const BooksModel: mongoose.Model<IbookSchema> = connections.model<IbookSchema>('BooksModel', BooksSchema);
+
+export default BooksModel;

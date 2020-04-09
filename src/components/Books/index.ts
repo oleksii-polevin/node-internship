@@ -1,5 +1,6 @@
 import express from 'express';
-import BookService, { IbookData } from './service';
+import BookService from './service';
+import { IbookData } from './interfaces';
 
 export default class Chart {
     /**

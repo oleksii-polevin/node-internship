@@ -6,7 +6,7 @@ import Chart from '.';
  * @type {Express.Router}
  * @const
  */
-const booksRouter: express.Router = express.Router();
+const router: express.Router = express.Router();
 
 /**
  * Route serving list of books.
@@ -16,6 +16,6 @@ const booksRouter: express.Router = express.Router();
  * @param {string} path - Express path
  * @param {callback} middleware - Express middleware.
  */
-booksRouter.get('/', Chart.chart);
+router.get('/', Chart.chart);
 
-export default booksRouter;
+export default router;
