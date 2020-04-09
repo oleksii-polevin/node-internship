@@ -6,11 +6,6 @@
         "start": "node src/server/index.js",
         "test": "npx mocha ./__test__ --exit"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "node_modules/.bin/eslint \"**/*.js\" --ignore-pattern node_modules/"
-        }
-    },
     "dependencies": {
         "@hapi/joi": "17.1.0",
         "@types/compression": "^1.7.0",

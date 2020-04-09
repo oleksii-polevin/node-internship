@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/typedef */
 // In this file you can configure migrate-mongo
 
 const config = {
