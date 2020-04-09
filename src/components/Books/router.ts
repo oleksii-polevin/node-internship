@@ -13,5 +13,6 @@ class UserRouter {
     }
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export const BooksRouter: express.Router = new UserRouter().router;
+const BooksRouter: express.Router = new UserRouter().router;
+
+export default BooksRouter;
