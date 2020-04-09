@@ -1,8 +1,8 @@
-import mongoose from 'mongoose';
+import { Schema, Model } from 'mongoose';
 import connections from '../../config/connection';
 import { IbookSchema } from './interfaces';
 
-const BooksSchema: mongoose.Schema = new mongoose.Schema(
+const BooksSchema: Schema = new Schema(
     {
         title: {
             type: String,
@@ -35,6 +35,6 @@ const BooksSchema: mongoose.Schema = new mongoose.Schema(
     },
 );
 
-const BooksModel: mongoose.Model<IbookSchema> = connections.model<IbookSchema>('BooksModel', BooksSchema);
+const BooksModel: Model<IbookSchema> = connections.model<IbookSchema>('BooksModel', BooksSchema);
 
 export default BooksModel;
