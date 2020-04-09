@@ -1,21 +1,17 @@
 import express from 'express';
 import Chart from '.';
 
-/**
- * Express router to mount books related functions on.
- * @type {Express.Router}
- * @const
- */
-const router: express.Router = express.Router();
+class UserRouter {
+    public router: express.Router = express.Router();
 
-/**
- * Route serving list of books.
- * @name /v1/books
- * @function
- * @inner
- * @param {string} path - Express path
- * @param {callback} middleware - Express middleware.
- */
-router.get('/', Chart.chart);
+    constructor() {
+        this.config();
+    }
 
-export default router;
+    private config(): void {
+        this.router.get('/', Chart.chart);
+    }
+}
+
+// eslint-disable-next-line import/prefer-default-export
+export const BooksRouter: express.Router = new UserRouter().router;

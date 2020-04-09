@@ -1,6 +1,6 @@
 import express from 'express';
 import http from 'http';
-import BooksRouter from '../components/Books/router';
+import { BooksRouter } from '../components/Books/router';
 
 /**
      * @function
